@@ -23,6 +23,8 @@ Codespace:
 
 `https://fluffy-potato-v4vg5qppq7pf5w4-8000.app.github.dev`
 
+Or just click "Open" when prompted. This link may not work on all machines.
+
 # Database Structure
 
 Subject and sample ids are converted to integers for convenience. Otherwise,
