@@ -1,2 +1,4 @@
-__pychache__
-boxes.json
+src/__pychache__
+assets/boxes.json
+assets/sample.csv
+assets/requested_stats.txt

@@ -20,9 +20,14 @@ st.subheader("Box Plot of Relative Frequencies of Cells in Responders and Nonrep
 
 fig = plotly.io.read_json('assets/boxes.json')
 st.plotly_chart(fig)
+st.text("See Results section for analysis of these plots.")
 
 st.subheader("All melanoma PBMC samples at baseline")
 
 st.dataframe(pd.read_csv("assets/sample.csv"))
 
-st.text("All data regarding the remaining queries in part 4 is printed to the terminal.")
+st.subheader("Requested Statistics about these Samples")
+
+f = open("assets/requested_stats.txt", 'r')
+st.text(f.read())
+f.close()

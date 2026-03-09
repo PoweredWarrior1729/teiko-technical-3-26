@@ -17,13 +17,17 @@ Subject and sample ids are converted to integers for convenience. Otherwise, the
 
 This minimizes redudancy quite well, so the database will scale reasonably well for thousands more subjects and samples. However, there wasn't that much redundancy to begin with, so no the gains from this schema are relatively unimpressive as long as none of the strings in the database get too long.
 
-# Code Structure
+With many different types of analysis to perform, we can query the database for any required data, since the storage format does not remove any of the data in the dataset, and SQL is flexible enough to perform any necessary query.
 
-## Overview
+# Code Description
 
-Each step of the pipeline was placed into its own file in the src directory. There is a script to load the data, generate the summary table, create the box plots, and compute the results.
+## Structure
+
+Each step of the pipeline was placed into its own file in the `src` directory. There is a script to load the data, generate the summary table, create the box plots, and compute the results for the analysis in part 4. The one eexception to this modularity is that `load_data.py` is in the root directory as required, but even then it merely runs the code in the `src` directory that loads the code. Each step saves its results in the `assets` folder, which is accessed in order to display the results on the dashboard.
 
 ## Explanation
+
+I designed the code in order to comply with the instructions and put as much code as possible into the `src` directory in order to keep the workspace clean and well organized. Each step was separated into its own python source file to keep the steps organized. The outputs had to be stored somewhere in order to be displayable entirely after running the pipeline, so the `assets` directory was created to hold that data for the dashboard. If I computed it when displaying the dashboard, the dashboard code could not be fully separated from the pipeline code, as the instructions seemed to suggest they should be.
 
 # Results
 

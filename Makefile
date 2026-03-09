@@ -12,4 +12,4 @@ dashboard:
 	streamlit run src/dashboard.py --server.port 8000 --server.address localhost
 
 clean:
-	rm cell-count.db assets/boxes.json
+	rm cell-count.db assets/boxes.json assets/requested_stats.txt assets/sample.csv
