@@ -14,7 +14,14 @@ commands in order.
 `make dashboard`
 
 ## Link to Dashboard
-http://localhost:8000
+
+Local:
+
+`http://localhost:8000`
+
+Codespace:
+
+`https://fluffy-potato-v4vg5qppq7pf5w4-8000.app.github.dev`
 
 # Database Structure
 
