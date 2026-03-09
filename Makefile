@@ -1,8 +1,7 @@
 setup:
 	pip install -r assets/requirements.txt
-	rm cell-count.db assets/boxes.json
 
-pipeline:
+pipeline: clean
 	python load_data.py
 	python src/summary_table.py
 	python src/analysis.py
@@ -12,4 +11,5 @@ dashboard:
 	streamlit run src/dashboard.py --server.port 8000 --server.address localhost
 
 clean:
-	rm cell-count.db assets/boxes.json assets/requested_stats.txt assets/sample.csv
+	rm -rf cell-count.db assets/boxes.json assets/requested_stats.txt
+	rm -rf assets/sample.csv src/__pycache__

@@ -16,7 +16,8 @@ st.subheader("Summary Table")
 
 st.dataframe(summary_table)
 
-st.subheader("Box Plot of Relative Frequencies of Cells in Responders and Nonreponders")
+st.subheader(
+"Box Plot of Relative Frequencies of Cells in Responders and Nonreponders")
 
 fig = plotly.io.read_json('assets/boxes.json')
 st.plotly_chart(fig)

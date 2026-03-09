@@ -5,8 +5,10 @@ conn = sqlite3.connect("cell-count.db")
 cursor = conn.cursor()
 df = pd.read_csv('assets/cell-count.csv')
 
-summary_text = "INSERT INTO Summary (sample_id, total_count, population, "
-summary_text += "pop_count, percentage) VALUES (?, ?, ?, ?, ?)"
+summary_text = """INSERT INTO Summary
+(sample_id, total_count, population, pop_count, percentage) 
+VALUES
+(?, ?, ?, ?, ?)"""
 summary_list = [0,0,"",0,0]
 
 populations = ("b_cell", "cd8_t_cell", "cd4_t_cell", "nk_cell", "monocyte")

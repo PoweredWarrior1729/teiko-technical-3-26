@@ -1,4 +1,6 @@
-src/__pychache__
+src/__pychache__/
+*.py[cdo]
 assets/boxes.json
 assets/sample.csv
 assets/requested_stats.txt
+cell-count.db
